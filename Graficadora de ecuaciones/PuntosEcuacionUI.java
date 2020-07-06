@@ -1,7 +1,6 @@
 /**
  * Calculadora en SWING
  * 
- * @author Juan Pablo Velzquez
  * @version 3.0
  */
 import java.awt.*;
