@@ -1,41 +1,46 @@
 /**
-* 
-* 
-
-* @version 3/17/2019
-*/
+ * Esta clase esta encargada de crear el polinomio adjuntado terminos
+ *
+ * @author Cristhian Adal Garcia Hdez.
+ * @version 1.5.5
+ */
 public class Polinomio
 {
-    private Termino terminos[];
-    private int tam=0;
-    public Polinomio(int grado){
-        terminos = new Termino[grado];
+    // instance variables - replace the example below with your own
+    private Termino termino[];
+    private int dos=0;
+    private String cadena = "\0";
+    public Polinomio(int grado)
+    {
+        termino = new Termino[grado+1];
     }
     
-    public void agregaTermino(Termino Term){
-        terminos[tam] = Term;
-        tam++;
+    public void agregaTermino(Termino term)
+    {
+        termino[dos]=term;
+        dos++;
     }
     
-    public double evalua(double x){
-        double res = 0.0;
-        Termino temp;
-        for (int i = 0;i<terminos.length;i++){
-            temp = terminos[i];
-            res += temp.evalua(x);
+    public double evalua(double x)
+    {
+        double evaluar = 0;
+        for (int index = 0; index < termino.length; index++)
+        {
+            if( termino[index] != null )
+                evaluar += termino[index].evalua(x);
         }
-        return res;
+        return evaluar;
     }
     
     public String toString()
     {
-       String poli="";
-         for (int i = 0;i<terminos.length;i++){
-            if(i>0)
-                poli= poli + "+";
-            poli= poli + "" + terminos[i].getCoeficiente()+ "X ^" + terminos[i].getExponente();
-        }
-        return poli;//(terminos[0].getCoeficiente() + " X ^ " + terminos[0].getExponente());
-       
+        for(int gis = 0; gis<dos; gis++ )
+        {
+            if ( termino[gis].getCoeficiente() < 0 )
+                cadena = ( cadena + termino[gis].getCoeficiente() + "x^ " + termino[gis].getExponente() );
+            else
+                cadena = (cadena + "+" + termino[gis].getCoeficiente() + "x^ " + termino[gis].getExponente() );
+        }     
+        return cadena;
     }
 }
