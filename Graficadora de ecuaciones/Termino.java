@@ -1,7 +1,6 @@
 /**
 * 
-* 
-* @author Juan Pblo Velazquez Caballero - 24500566
+*
 * @version 3/19/2019
 */
 
