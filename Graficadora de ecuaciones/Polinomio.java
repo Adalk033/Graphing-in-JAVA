@@ -1,7 +1,7 @@
 /**
 * 
 * 
-* @author Juan Pblo Velazquez Caballero - 24500566
+
 * @version 3/17/2019
 */
 public class Polinomio
