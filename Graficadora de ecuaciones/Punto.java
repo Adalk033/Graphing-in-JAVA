@@ -1,43 +1,33 @@
-
 /**
-* 
-* 
-
-* @version 3/17/2019
-*/
+ * Esta es una clase generica donde acepta cualquier dato
+ *
+ * @author Cristhian Adal Garcia Hdez.
+ * @version 1.0
+ */
 public class Punto <E>
 {
-    private E x, y;
+    private E x;
+    private E y;
     
-    public Punto(E x, E y)
-    {
-       this.x=x;
-       this.y=y;
+    public Punto(E x, E y){
+        this.x = x;
+        this.y = y;
+    }
+
+    public E getX(){
+        return x;
     }
     
-    public E getX()
-    {
-        return this.x;
+    public E getY(){
+        return y;
     }
     
-    public void setX(E x)
-    {
-        this.x=x;//(x > 0) ? x : 0;
+    public void setX(E x){
+        this.x = x;
     }
     
-    public E getY()
-    {
-        return this.y;
+    public void setY(E y){ 
+        this.y = y;
     }
-    
-    
-    public void setY(E y)
-    {
-        this.y=y;//(y > 0) ? y : 0;
-    }
-    
-    
-    
-    
     
 }
